@@ -174,8 +174,10 @@ Default `1000`
 * `max_conn` - (Optional) Maximum number of connections for this Backend.
 Default `200`.
 * `port` - (Optional) The port number on which the Backend responds. Default `80`.
+* `request_condition` - (Optional, string) Condition, which if met, will select this backend during a request. 
 * `ssl_check_cert` - (Optional) Be strict about checking SSL certs. Default `true`.
 * `ssl_hostname` - (Optional) Used for both SNI during the TLS handshake and to validate the cert.
+* `shield` - (Optional) The POP of the shield designated to reduce inbound load.
 * `weight` - (Optional) The [portion of traffic](https://docs.fastly.com/guides/performance-tuning/load-balancing-configuration.html#how-weight-affects-load-balancing) to send to this Backend. Each Backend receives `weight / total` of the traffic. Default `100`.
 
 The `condition` block supports allows you to add logic to any basic configuration
